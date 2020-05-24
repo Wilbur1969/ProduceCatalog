@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block content %}
+<body>
+
+<h1>Delete Menu Item</p>
+
+<div class="jumbotron">
+
+<p>Are you sure that you want to delete menu item: {{deletedMenuItem.name}}</p>
+
+<form action="{{url_for('deleteMenuItem',produce_id=produce_id,id=id,deletedMenuItem=deletedMenuItem)}}" method='POST'>
+
+<input type='submit' value='Delete'>
+
+</form>
+
+<a href='{{url_for('produceMenu',produce_id=deletedMenuItem.produce_id)}}'>Cancel</a>
+
+</div>
+
+{% endblock %}

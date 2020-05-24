@@ -1,0 +1,28 @@
+{% extends "main.html" %}
+{% block content %}
+
+<h1>This is the editMenuItem page!!</h1>
+
+<div class="jumbotron">
+
+<form action="{{url_for('editMenuItem',produce_id=produce_id,id=id,editedItem=editedItem)}}" method='POST'>
+
+<p>Name: </p> <input type = 'text' size='30' name = 'name' placeholder = '{{editedItem.name}}'>
+
+<p>ID: </p> <input type = 'number' size='30' name = 'id' placeholder = '{{editedItem.id}}'>
+
+<p>Description: </p> <input type = 'text' size='30' name = 'description' placeholder = '{{editedItem.description}}'>
+
+<p>Price: </p> <input type = 'text' size='30' name = 'price' placeholder = '{{editedItem.price}}'>
+
+<p>Type: </p> <input type = 'text' size='30' name = 'type' placeholder = '{{editedItem.type}}'>
+
+<p>Path: </p> <input type = 'text' size='30' name = 'path' placeholder = '{{editedItem.path}}'>
+
+<p>Produce_id: </p> <input type = 'number' size='30' name = 'produce_id' placeholder = '{{editedItem.produce_id}}'>
+
+<input type='submit' value='Edit'>
+
+</div> 
+
+{% endblock %}

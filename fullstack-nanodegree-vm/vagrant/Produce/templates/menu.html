@@ -1,0 +1,53 @@
+{% extends "main.html" %}
+{% block content %}
+<!--
+<a href = '{{url_for('newMenuItem',produce_id=produce.id) }}'>Create New Item</a>
+
+<div class = 'pane'>
+	<div class = 'header'>
+		<h1>{{produce.name}}</h>
+	</div>
+</div>
+	<div class='flash'>	
+		{% with messages = get_flashed_messages() %}
+			{% if messages %}
+			<div class="alert alert-primary" role="alert">
+				<ul>
+				{% for message in messages %}
+					<li><strong> {{message }} </strong></li>
+				{% endfor %}
+				</ul>
+			</div>
+			{% endif %}
+		{% endwith %}
+	</div>
+
+</br></br>
+
+
+
+{% for i in items %}
+
+
+<div class="jumbotron">
+<div class="row">
+  <div class="column">	
+    <div class="card"><img src="{{url_for('static', filename= i.path)}}" /></br>
+	<hr>
+
+	Name: {{i.name}}</br>
+	ID: {{i.id}}</br>
+	Description: {{i.description}}</br>
+	Price: {{i.price}}</br>
+	Type: {{i.type}}</br>
+	Path: {{i.path}}</br>
+	Produce ID: {{i.produce_id}}</br>
+	<a href = '{{url_for('editMenuItem',produce_id=produce.id,id=i.id) }}'>Edit Menu Item</a></br>
+	<a href = '{{url_for('deleteMenuItem',produce_id=produce.id,id=i.id)}}'>Delete Menu Item</a>	
+	</div>	
+  </div>	
+</div>
+</div>
+-->
+{% endfor %}
+{% endblock %}
